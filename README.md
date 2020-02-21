@@ -2,7 +2,7 @@
 ## Purpose
 Originally, writing a proxy as a tool for playing around web requests was an idea,
 and I came across more interesting cases on Medium and Github.
-As I work with Java microservices, why not write a data microservice on Node.js as random test data providers?  
+As I work with Java microservices, why not write a data microservice built on Node.js and use it as provider of random users' data'in isolated environments such as on-demand created containers?  
 <img src="https://i.imgur.com/RVpDC4x.png"/>
 
 Simple <a href="https://www.nginx.com/resources/glossary/reverse-proxy-server/">reverse-proxy</a> data service based on Nginx NodeJS and randomuser.me .
