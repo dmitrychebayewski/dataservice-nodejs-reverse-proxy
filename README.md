@@ -16,7 +16,7 @@ This project uses Node.js
 The code in this project is automatically formatted using [Eslint](https://eslint.org/).
 The semicolon use is enforced by rule.
 
-##IDE 
+## IDE 
 This project has been created in WebStorm, but it will do in Microsoft Visual Studio Code as well.
 
 ## Installation
@@ -24,8 +24,19 @@ This project has been created in WebStorm, but it will do in Microsoft Visual St
 Use these steps to install project
 
 1. Install Docker: https://www.docker.com/
-2. Build project: `docker-compose build`
-3. Run docker-compose: `docker-compose up -d`
+2. Build the containers 
+'''
+$docker-compose build
+'''
+3. Run docker-compose 
+'''
+$docker-compose up -d
+'''
+4. Use the microservice
+'''
+http://localhost/api/random-user
+http://localhost/api/random-password
+'''
 4. Stop containers: `docker-compose down`
 
 For local development (NodeJS) pass variables in .env file.

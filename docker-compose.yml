@@ -1,4 +1,6 @@
 version: "2"
+networks:
+  private:
 services:
   nginx:
     build: ./nginx
@@ -8,30 +10,32 @@ services:
       - node3:node3
     ports:
       - "80:80"
+    networks:
+      - private
 
   node1:
     build: ./nodejs
     environment:
-      PORT: 4000
+      EXPOSE: 4000
       SECRET: secret
       NODE_ENV: "production"
-    ports:
-      - "4000:4000"
+    networks:
+      - private
 
   node2:
     build: ./nodejs
     environment:
-      PORT: 4000
+      EXPOSE: 4000
       SECRET: secret
       NODE_ENV: "production"
-    ports:
-      - "4001:4000"
+    networks:
+      - private
 
   node3:
     build: ./nodejs
     environment:
-      PORT: 4000
+      EXPOSE: 4000
       SECRET: secret
       NODE_ENV: "production"
-    ports:
-      - "4002:4000"
+    networks:
+      - private
