@@ -1,4 +1,4 @@
-# Data service written in NodeJS and packaged with nginx reverse-proxy
+# Data microservice written in NodeJS and packaged with nginx reverse-proxy
 
 <img src="https://i.imgur.com/RVpDC4x.png"/>
 
