@@ -1,16 +1,15 @@
-FROM node:8
+FROM node:latest
 
 WORKDIR /src
 
 COPY package.json ./
-COPY yarn.lock ./
 
 RUN apt-get update
 
-RUN apt-get install apt-transport-https\
+RUN apt-get install --yes apt-transport-https\
     && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -\
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list\
-    && apt-get update && apt-get install yarn\
+    && apt-get update && apt-get install --yes yarn\
     && echo 'yarn installed: ' && yarn --version
 
 COPY . .

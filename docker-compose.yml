@@ -11,48 +11,27 @@ services:
 
   node1:
     build: ./nodejs
-    links:
-      - db
     environment:
       PORT: 4000
       SECRET: secret
-      ACCESS_TOKEN_EXPIRES: 24h
-      DB_CONNECTION: postgres://postgres:pass@db:5432/nodejs_reverse_proxy_example
       NODE_ENV: "production"
     ports:
       - "4000:4000"
 
   node2:
     build: ./nodejs
-    links:
-      - db
     environment:
       PORT: 4000
       SECRET: secret
-      ACCESS_TOKEN_EXPIRES: 24h
-      DB_CONNECTION: postgres://postgres:pass@db:5432/nodejs_reverse_proxy_example
       NODE_ENV: "production"
     ports:
       - "4001:4000"
 
   node3:
     build: ./nodejs
-    links:
-      - db
     environment:
       PORT: 4000
       SECRET: secret
-      ACCESS_TOKEN_EXPIRES: 24h
-      DB_CONNECTION: postgres://postgres:pass@db:5432/nodejs_reverse_proxy_example
       NODE_ENV: "production"
     ports:
       - "4002:4000"
-
-  db:
-    image: postgres:latest
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=pass
-      - POSTGRES_DB=nodejs_reverse_proxy_example
-    ports:
-      - "5432:5432"

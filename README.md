@@ -1,10 +1,23 @@
 # Data microservice written in NodeJS and packaged with nginx reverse-proxy
-
+## Purpose
+Originally, writing a proxy as a tool for playing around web requests was an idea,
+and I came across more interesting cases on Medium and Github.
+As I work with Java microservices, why not write a data microservice on Node.js as random test data providers?  
 <img src="https://i.imgur.com/RVpDC4x.png"/>
 
 Simple <a href="https://www.nginx.com/resources/glossary/reverse-proxy-server/">reverse-proxy</a> data service based on Nginx NodeJS and randomuser.me .
 
 NodeJS part of this project is based on <a href="https://github.com/morzhanov/nodejs-koa-boilerplate">nodejs-koa-boilerplate</a>
+
+## Software Stack
+This project uses Node.js
+
+## Code Formatting Rules
+The code in this project is automatically formatted using [Eslint](https://eslint.org/).
+The semicolon use is enforced by rule.
+
+##IDE 
+This project has been created in WebStorm, but it will do in Microsoft Visual Studio Code as well.
 
 ## Installation
 
@@ -19,7 +32,7 @@ For local development (NodeJS) pass variables in .env file.
  
 ## NodeJS project folders structure
 
-This boilerplate contains such folders:
+This boilerplate project has the following directory structure:
 
 - <b>/src </b> - main sources folder;
 - <b>/src/constants </b> - constants;
@@ -59,7 +72,10 @@ This boilerplate contains such folders:
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
+## People who inspired me to write the data microservice in Node.js
+-[Vlad Morzhanov](https://github.com/morzhanov/nodejs-reverse-proxy-example)
 
+-[Thomas Hunter II](https://medium.com/intrinsic/why-should-i-use-a-reverse-proxy-if-node-js-is-production-ready-5a079408b2ca)
 ## Author
 
 Dmitry Che
